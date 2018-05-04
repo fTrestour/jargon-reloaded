@@ -63,7 +63,16 @@ const getEntryDetails = async entry => {
   }
 }
 
-getEntries(url)
-  .then(randomEntry)
-  .then(getEntryDetails)
-  .then(console.log)
+// Fetches the right entry in the lexicon for an url
+const getRelatedEntry = entries => url =>
+  entries.find(entry => entry.url === url)
+
+// getEntries(url)
+//   .then(randomEntry)
+//   .then(getEntryDetails)
+//   .then(console.log)
+
+// getEntries(url)
+//   .then(getRelatedEntry)
+//   .then(fn => fn('http://catb.org/jargon/html/N/NMI.html'))
+//   .then(console.log)
