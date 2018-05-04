@@ -34,9 +34,19 @@ const getEntryDetails = async entry => {
     const dom = await JSDOM.fromURL(entry.url)
     const document = dom.window.document
 
-    const description = document.querySelector('p').innerHTML
+    const descriptionElement = document.querySelector('p')
 
-    return description
+    const linksWithDuplicates = Object.values(document.querySelectorAll('a'))
+      .map(link => link.href)
+      .filter(url => url && url.split('/').length !== slashes)
+    const links = Array.from(new Set(linksWithDuplicates))
+
+    const description = descriptionElement.textContent.replace(
+      /(\n+\s*)+/g,
+      ' '
+    )
+
+    return { ...entry, description, links }
   } catch (error) {
     console.error(error)
   }
