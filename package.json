@@ -1,0 +1,28 @@
+{
+  "name": "jargon-reloaded",
+  "version": "1.0.0",
+  "description": "jargon-reloaded",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "fetch": "node getData.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fTrestour/jargon-reloaded.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fTrestour/jargon-reloaded/issues"
+  },
+  "homepage": "https://github.com/fTrestour/jargon-reloaded#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "d3": "^5.1.0",
+    "jsdom": "^11.10.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.8.1"
+  }
+}

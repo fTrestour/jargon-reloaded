@@ -1,4 +1,6 @@
 const jsdom = require('jsdom')
+var fs = require('fs')
+
 const { JSDOM } = jsdom
 
 const urlBase = 'http://catb.org/jargon/html/'
@@ -67,12 +69,22 @@ const getEntryDetails = async entry => {
 const getRelatedEntry = entries => url =>
   entries.find(entry => entry.url === url)
 
-// getEntries(url)
-//   .then(randomEntry)
-//   .then(getEntryDetails)
-//   .then(console.log)
+getEntries(url).then(async entries => {
+  const result = []
 
-// getEntries(url)
-//   .then(getRelatedEntry)
-//   .then(fn => fn('http://catb.org/jargon/html/N/NMI.html'))
-//   .then(console.log)
+  for (entry of entries) {
+    entry = await getEntryDetails(entry)
+    result.push(entry)
+
+    fs.writeFile('entries.json', JSON.stringify(result, null, 2), function(
+      err
+    ) {
+      if (err) {
+        console.log(err)
+      }
+    })
+    console.log(entry)
+  }
+
+  return result
+})
