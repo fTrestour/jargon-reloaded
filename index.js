@@ -69,7 +69,26 @@ const dragDrop = d3
     node.fy = null
   })
 
-const getNodeColor = node => 'gray'
+const getNeighbors = node => (node ? [node.url, ...node.links] : [])
+const isNeighborLink = (node, link) =>
+  link.target.url === node.url || link.source.url === node.url
+
+const getNodeColor = (node, neighbors) =>
+  neighbors && neighbors.indexOf(node.url) !== -1 ? 'blue' : 'gray'
+const getTextColor = (node, neighbors) =>
+  neighbors && neighbors.indexOf(node.url) !== -1 ? 'blue' : 'black'
+const getLinkColor = (node, link) =>
+  isNeighborLink(node, link) ? 'blue' : 'rgba(#000,.4)'
+
+const selectNode = selectedNode => {
+  console.log(selectedNode)
+  const neighbors = getNeighbors(selectedNode)
+  console.log(neighbors)
+
+  nodeElements.attr('fill', node => getNodeColor(node, neighbors))
+  textElements.attr('fill', node => getTextColor(node, neighbors))
+  linkElements.attr('stroke', link => getLinkColor(selectedNode, link))
+}
 
 // Display nodes
 const nodeElements = svg
@@ -79,7 +98,9 @@ const nodeElements = svg
   .enter()
   .append('circle')
   .attr('r', 10)
-  .attr('fill', getNodeColor)
+  .attr('fill', getNodeColor('normal'))
+  .call(dragDrop)
+  .on('click', selectNode)
 
 const textElements = svg
   .append('g')
@@ -104,7 +125,6 @@ const linkElements = svg
 
 // Tick simulation
 simulation.nodes(graph.nodes).on('tick', () => {
-  nodeElements.call(dragDrop)
   nodeElements.attr('cx', node => node.x).attr('cy', node => node.y)
   textElements.attr('x', node => node.x).attr('y', node => node.y)
   linkElements
