@@ -1,33 +1,36 @@
 import * as d3 from 'd3'
 
 import entries from './entries.json'
-// import { randomEntry } from './processData.js'
+import { randomEntry, getRelatedEntry } from './processData.js'
 
 const createLink = (source, target) => ({
   source,
   target
 })
 
-const links = []
-for (let entry of entries) {
-  if (entry && entry.links) {
-    for (let url of entry.links) {
-      if (
-        !links.find(
-          element =>
-            element == createLink(entry.url, url) ||
-            element == createLink(url, entry.url)
-        )
-      ) {
-        links.push(createLink(entry.url, url))
-      }
-    }
-  }
+const firstEntry = randomEntry(entries)
+const graph = {
+  nodes: [firstEntry],
+  links: []
 }
 
-const graph = {
-  nodes: entries,
-  links
+const updateData = selectedNode => {
+  const oldNodes = graph.nodes
+  const oldLinks = graph.links
+
+  const newNodes = selectedNode.links
+    .map(getRelatedEntry(entries))
+    .filter(node => oldNodes.indexOf(node) === -1)
+  const newLinks = selectedNode.links
+    .filter(
+      url =>
+        oldLinks.indexOf(createLink(selectedNode.url, url)) === -1 &&
+        oldLinks.indexOf(createLink(url, selectedNode.url)) === -1
+    )
+    .map(url => createLink(selectedNode.url, url))
+
+  newNodes.forEach(node => graph.nodes.push(node))
+  newLinks.forEach(link => graph.links.push(link))
 }
 
 // Set the svg
@@ -71,67 +74,125 @@ const dragDrop = d3
 
 const getNeighbors = node => (node ? [node.url, ...node.links] : [])
 const isNeighborLink = (node, link) =>
-  link.target.url === node.url || link.source.url === node.url
+  node && (link.target.url === node.url || link.source.url === node.url)
 
 const getNodeColor = (node, neighbors) =>
-  neighbors && neighbors.indexOf(node.url) !== -1 ? 'blue' : 'gray'
+  neighbors && neighbors.indexOf(node.url) !== -1 ? 'blue' : 'black'
 const getTextColor = (node, neighbors) =>
   neighbors && neighbors.indexOf(node.url) !== -1 ? 'blue' : 'black'
 const getLinkColor = (node, link) =>
-  isNeighborLink(node, link) ? 'blue' : 'rgba(#000,.4)'
+  isNeighborLink(node, link) ? 'blue' : 'black'
 
 const selectNode = selectedNode => {
-  console.log(selectedNode)
   const neighbors = getNeighbors(selectedNode)
-  console.log(neighbors)
+
+  updateData(selectedNode)
+  updateSimulation()
 
   nodeElements.attr('fill', node => getNodeColor(node, neighbors))
   textElements.attr('fill', node => getTextColor(node, neighbors))
   linkElements.attr('stroke', link => getLinkColor(selectedNode, link))
 }
 
-// Display nodes
-const nodeElements = svg
-  .append('g')
-  .selectAll('circle')
-  .data(graph.nodes)
-  .enter()
-  .append('circle')
-  .attr('r', 10)
-  .attr('fill', getNodeColor('normal'))
-  .call(dragDrop)
-  .on('click', selectNode)
+const linkGroup = svg.append('g').attr('class', 'links')
+const nodeGroup = svg.append('g').attr('class', 'nodes')
+const textGroup = svg.append('g').attr('class', 'texts')
+let linkElements, nodeElements, textElements
 
-const textElements = svg
-  .append('g')
-  .selectAll('text')
-  .data(graph.nodes)
-  .enter()
-  .append('text')
-  .text(node => node.name)
-  .attr('font-size', 15)
-  .attr('dx', 15)
-  .attr('dy', 4)
+const updateGraph = () => {
+  // links
+  linkElements = linkGroup.selectAll('line').data(graph.links, function(link) {
+    return link.target.url + link.source.url
+  })
 
-// Add links
-const linkElements = svg
-  .append('g')
-  .selectAll('line')
-  .data(graph.links)
-  .enter()
-  .append('line')
-  .attr('stroke-width', 1)
-  .attr('stroke', 'rgba(#000,.4)')
+  linkElements.exit().remove()
 
-// Tick simulation
-simulation.nodes(graph.nodes).on('tick', () => {
-  nodeElements.attr('cx', node => node.x).attr('cy', node => node.y)
-  textElements.attr('x', node => node.x).attr('y', node => node.y)
-  linkElements
-    .attr('x1', link => link.source.x)
-    .attr('y1', link => link.source.y)
-    .attr('x2', link => link.target.x)
-    .attr('y2', link => link.target.y)
-})
+  var linkEnter = linkElements
+    .enter()
+    .append('line')
+    .attr('stroke-width', 1)
+    .attr('stroke', link => getLinkColor(null, link))
+
+  linkElements = linkEnter.merge(linkElements)
+
+  // nodes
+  nodeElements = nodeGroup
+    .selectAll('circle')
+    .data(graph.nodes, function(node) {
+      return node.id
+    })
+
+  nodeElements.exit().remove()
+
+  var nodeEnter = nodeElements
+    .enter()
+    .append('circle')
+    .attr('r', 10)
+    .attr('fill', node => getTextColor(node))
+    .call(dragDrop)
+    // we link the selectNode method here
+    // to update the graph on every click
+    .on('click', selectNode)
+
+  nodeElements = nodeEnter.merge(nodeElements)
+
+  // texts
+  textElements = textGroup.selectAll('text').data(graph.nodes, function(node) {
+    return node.url
+  })
+
+  textElements.exit().remove()
+
+  var textEnter = textElements
+    .enter()
+    .append('text')
+    .text(function(node) {
+      return node.name
+    })
+    .attr('font-size', 15)
+    .attr('dx', 15)
+    .attr('dy', 4)
+
+  textElements = textEnter.merge(textElements)
+}
+
+const updateSimulation = () => {
+  updateGraph()
+
+  simulation.nodes(graph.nodes).on('tick', () => {
+    nodeElements
+      .attr('cx', function(node) {
+        return node.x
+      })
+      .attr('cy', function(node) {
+        return node.y
+      })
+    textElements
+      .attr('x', function(node) {
+        return node.x
+      })
+      .attr('y', function(node) {
+        return node.y
+      })
+    linkElements
+      .attr('x1', function(link) {
+        return link.source.x
+      })
+      .attr('y1', function(link) {
+        return link.source.y
+      })
+      .attr('x2', function(link) {
+        return link.target.x
+      })
+      .attr('y2', function(link) {
+        return link.target.y
+      })
+  })
+
+  simulation.force('link').links(graph.links)
+  simulation.restart()
+}
 
 simulation.force('link').links(graph.links)
+
+updateSimulation()
