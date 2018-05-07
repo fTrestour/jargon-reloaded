@@ -1,28 +1,11 @@
 import * as d3 from 'd3'
 
 import entries from './entries.json'
-
-const svg = d3.select('svg'),
-  width = +svg.attr('width'),
-  height = +svg.attr('height')
-
-const color = d3.scaleOrdinal(d3.schemeCategory20)
-
-const simulation = d3
-  .forceSimulation()
-  .force(
-    'link',
-    d3.forceLink().id(function(node) {
-      return node.url
-    })
-  )
-  .force('charge', d3.forceManyBody())
-  .force('center', d3.forceCenter(width / 2, height / 2))
+// import { randomEntry } from './processData.js'
 
 const createLink = (source, target) => ({
   source,
-  target,
-  value: 1
+  target
 })
 
 const links = []
@@ -42,84 +25,73 @@ for (let entry of entries) {
   }
 }
 
-const graph = { nodes: entries, links }
-// console.log(graph)
+const graph = {
+  nodes: entries,
+  links
+}
 
-var link = svg
-  .append('g')
-  .attr('class', 'links')
-  .selectAll('line')
-  .data(graph.links)
-  .enter()
-  .append('line')
-  .attr('stroke-width', function(d) {
-    return Math.sqrt(d.value)
-  })
+// Set the svg
+const width = window.innerWidth
+const height = window.innerHeight
+const svg = d3
+  .select('svg')
+  .attr('width', width)
+  .attr('height', height)
 
-var node = svg
+// Set the simulation details
+var linkForce = d3
+  .forceLink()
+  .id(link => link.url)
+  .strength(link => 1)
+
+var simulation = d3
+  .forceSimulation()
+  .force('link', linkForce)
+  .force('charge', d3.forceManyBody().strength(-120))
+  .force('center', d3.forceCenter(width / 2, height / 2))
+
+const getNodeColor = node => 'gray'
+
+// Display nodes
+const nodeElements = svg
   .append('g')
-  .attr('class', 'nodes')
   .selectAll('circle')
   .data(graph.nodes)
   .enter()
   .append('circle')
-  .attr('r', 5)
-  .attr('fill', function(d) {
-    return color(1)
-  })
-  .call(
-    d3
-      .drag()
-      .on('start', dragstarted)
-      .on('drag', dragged)
-      .on('end', dragended)
-  )
+  .attr('r', 10)
+  .attr('fill', getNodeColor)
 
-node.append('title').text(function(d) {
-  return d.url
+const textElements = svg
+  .append('g')
+  .selectAll('text')
+  .data(graph.nodes)
+  .enter()
+  .append('text')
+  .text(node => node.name)
+  .attr('font-size', 15)
+  .attr('dx', 15)
+  .attr('dy', 4)
+
+// Add links
+const linkElements = svg
+  .append('g')
+  .selectAll('line')
+  .data(graph.links)
+  .enter()
+  .append('line')
+  .attr('stroke-width', 1)
+  .attr('stroke', '#B12100')
+
+// Tick simulation
+simulation.nodes(graph.nodes).on('tick', () => {
+  nodeElements.attr('cx', node => node.x).attr('cy', node => node.y)
+  textElements.attr('x', node => node.x).attr('y', node => node.y)
+  linkElements
+    .attr('x1', link => link.source.x)
+    .attr('y1', link => link.source.y)
+    .attr('x2', link => link.target.x)
+    .attr('y2', link => link.target.y)
 })
 
-simulation.nodes(graph.nodes).on('tick', ticked)
-
 simulation.force('link').links(graph.links)
-
-function ticked() {
-  link
-    .attr('x1', function(d) {
-      return d.source.x
-    })
-    .attr('y1', function(d) {
-      return d.source.y
-    })
-    .attr('x2', function(d) {
-      return d.target.x
-    })
-    .attr('y2', function(d) {
-      return d.target.y
-    })
-
-  node
-    .attr('cx', function(d) {
-      return d.x
-    })
-    .attr('cy', function(d) {
-      return d.y
-    })
-}
-
-function dragstarted(d) {
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart()
-  d.fx = d.x
-  d.fy = d.y
-}
-
-function dragged(d) {
-  d.fx = d3.event.x
-  d.fy = d3.event.y
-}
-
-function dragended(d) {
-  if (!d3.event.active) simulation.alphaTarget(0)
-  d.fx = null
-  d.fy = null
-}

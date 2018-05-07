@@ -149,8 +149,8 @@
       "http://catb.org/jargon/html/C/choke.html",
       "http://catb.org/jargon/html/E/ELIZA-effect.html",
       "http://catb.org/jargon/html/A/ad-hockery.html",
-      "http://catb.org/jargon/html/W/water-MIPS.html#crunchly74-08-18",
-      "http://catb.org/jargon/html/B/bug.html#crunchly73-07-29"
+      "http://catb.org/jargon/html/W/water-MIPS.html",
+      "http://catb.org/jargon/html/B/bug.html"
     ]
   },
   {
@@ -202,10 +202,7 @@
       "http://catb.org/jargon/html/Z/Zork.html",
       "http://catb.org/jargon/html/I/Infocom.html",
       "http://catb.org/jargon/html/X/xyzzy.html",
-      "http://catb.org/jargon/html/P/plugh.html",
-      "ftp://ftp.wustl.edu/doc/misc/if-archive/games/source/advent.tar.Z",
-      "http://www.forkexec.com/html/play-advent.html",
-      "http://www.rickadams.org/adventure/"
+      "http://catb.org/jargon/html/P/plugh.html"
     ]
   },
   {
@@ -313,8 +310,7 @@
     "description": " The archetypal individuals used as examples in discussions of cryptographic protocols.  Originally, theorists would say something like: “A communicates with someone who claims to be B, So to be sure, A tests that B knows a secret number K. So A sends to B a random number X. B then forms Y by encrypting X under key K and sends Y back to A” Because this sort of thing is quite hard to follow, theorists stopped using the unadorned letters A and B to represent the main players and started calling them Alice and Bob. So now we say “Alice communicates with someone claiming to be Bob, and to be sure, Alice tests that Bob knows a secret number K. Alice sends to Bob a random number X. Bob then forms Y by encrypting X under key K and sends Y back to Alice”.  A whole mythology rapidly grew up around the metasyntactic names; see http://www.conceptlabs.co.uk/alicebob.html.",
     "links": [
       "http://catb.org/jargon/html/A/aliasing-bug.html",
-      "http://catb.org/jargon/html/A/All-hardware-sucks--all-software-sucks-.html",
-      "http://www.conceptlabs.co.uk/alicebob.html"
+      "http://catb.org/jargon/html/A/All-hardware-sucks--all-software-sucks-.html"
     ]
   },
   {
@@ -409,7 +405,6 @@
     "links": [
       "http://catb.org/jargon/html/A/ambimouseterous.html",
       "http://catb.org/jargon/html/A/Amiga-Persecution-Complex.html",
-      "http://www.blazemonger.com/BM/",
       "http://catb.org/jargon/html/V/video-toaster.html"
     ]
   },
@@ -475,8 +470,6 @@
       "http://catb.org/jargon/html/R/rogue.html",
       "http://catb.org/jargon/html/E/elder-days.html",
       "http://catb.org/jargon/html/E/elvish.html",
-      "http://thangorodrim.angband.org/",
-      "http://www.zangband.org/",
       "http://catb.org/jargon/html/R/Random-Number-God.html"
     ]
   },
@@ -560,8 +553,7 @@
     "links": [
       "http://catb.org/jargon/html/A/ANSI-standard-pizza.html",
       "http://catb.org/jargon/html/A/AOL-.html",
-      "http://catb.org/jargon/html/B/blog.html",
-      "http://www.littlegreenfootballs.com/weblog/weblog.php"
+      "http://catb.org/jargon/html/B/blog.html"
     ]
   },
   {
@@ -632,7 +624,6 @@
       "http://catb.org/jargon/html/S/spam.html",
       "http://catb.org/jargon/html/C/cascade.html",
       "http://catb.org/jargon/html/D/despew.html",
-      "http://groups.google.com/groups?threadm=tweekC4qM0A.H3q%40netcom.com",
       "http://catb.org/jargon/html/G/Great-Worm.html",
       "http://catb.org/jargon/html/S/sorcerers-apprentice-mode.html",
       "http://catb.org/jargon/html/S/software-laser.html",
@@ -720,7 +711,6 @@
       "http://catb.org/jargon/html/A/ASCII.html",
       "http://catb.org/jargon/html/A/ASCIIbetical-order.html",
       "http://catb.org/jargon/html/B/boxology.html",
-      "http://www.asciimation.co.nz/",
       "http://catb.org/jargon/html/W/warlording.html"
     ]
   },
@@ -1288,8 +1278,8 @@
     "links": [
       "http://catb.org/jargon/html/B/batbelt.html",
       "http://catb.org/jargon/html/B/bathtub-curve.html",
-      "http://catb.org/jargon/html/F/flush.html#crunchly-5678",
-      "http://catb.org/jargon/html/W/washing-machine.html#crunchly76-02-14"
+      "http://catb.org/jargon/html/F/flush.html",
+      "http://catb.org/jargon/html/W/washing-machine.html"
     ]
   },
   {
@@ -1344,7 +1334,6 @@
       "http://catb.org/jargon/html/B/baz.html",
       "http://catb.org/jargon/html/B/bboard.html",
       "http://catb.org/jargon/html/L/Linux.html",
-      "http://www.catb.org/~esr/writings/cathedral-bazaar/",
       "http://catb.org/jargon/html/B/Brookss-Law.html",
       "http://catb.org/jargon/html/C/cathedral.html",
       "http://catb.org/jargon/html/O/open-source.html"
@@ -1457,8 +1446,7 @@
       "http://catb.org/jargon/html/F/flavorful.html",
       "http://catb.org/jargon/html/C/chrome.html",
       "http://catb.org/jargon/html/B/bells-and-whistles.html",
-      "http://catb.org/jargon/html/G/glitch.html#crunchly73-06-04",
-      "http://catb.org/jargon/html/B/bells-and-whistles.html#crunchly73-05-28"
+      "http://catb.org/jargon/html/G/glitch.html"
     ]
   },
   {
@@ -1624,7 +1612,6 @@
     "links": [
       "http://catb.org/jargon/html/B/big-win.html",
       "http://catb.org/jargon/html/B/bignum.html",
-      "http://khavrinen.lcs.mit.edu/wollman/ien-137.txt",
       "http://catb.org/jargon/html/P/PDP-10.html",
       "http://catb.org/jargon/html/L/little-endian.html",
       "http://catb.org/jargon/html/M/middle-endian.html",
@@ -1727,8 +1714,7 @@
       "http://catb.org/jargon/html/B/black-hole.html",
       "http://catb.org/jargon/html/C/chad-box.html",
       "http://catb.org/jargon/html/B/bit-bucket.html",
-      "http://catb.org/jargon/html/W/washing-machine.html#crunchly76-02-14",
-      "http://catb.org/jargon/html/B/bit-bucket.html#crunchly75-10-04"
+      "http://catb.org/jargon/html/W/washing-machine.html"
     ]
   },
   {
@@ -2145,7 +2131,6 @@
       "http://catb.org/jargon/html/B/BLT.html",
       "http://catb.org/jargon/html/B/Blue-Glue.html",
       "http://catb.org/jargon/html/P/phreaker.html",
-      "http://www.elfqrin.com/docs/hakref/phrkbox/phreakboxes.html",
       "http://catb.org/jargon/html/I/IBM.html"
     ]
   },
@@ -2182,8 +2167,7 @@
       "http://catb.org/jargon/html/B/blue-goo.html",
       "http://catb.org/jargon/html/B/blue-wire.html",
       "http://catb.org/jargon/html/B/Black-Screen-of-Death.html",
-      "http://catb.org/jargon/html/B/BSOD.html",
-      "http://archive.salon.com/21st/chal/1998/02/10chal.html"
+      "http://catb.org/jargon/html/B/BSOD.html"
     ]
   },
   {
@@ -2259,11 +2243,9 @@
     "links": [
       "http://catb.org/jargon/html/B/boat-anchor.html",
       "http://catb.org/jargon/html/B/bodge.html",
-      "http://www.demon.net/",
       "http://catb.org/jargon/html/C/Church-of-the-SubGenius.html",
       "http://catb.org/jargon/html/B/BOFH.html",
-      "http://catb.org/jargon/html/L/luser.html",
-      "http://bob.bob.bofh.org/~giolla/bobcode.html"
+      "http://catb.org/jargon/html/L/luser.html"
     ]
   },
   {
@@ -2294,7 +2276,6 @@
       "http://catb.org/jargon/html/B/BOF.html",
       "http://catb.org/jargon/html/B/bogo-sort.html",
       "http://catb.org/jargon/html/L/luser.html",
-      "http://bofh.ntk.net/Bastard.html",
       "http://catb.org/jargon/html/S/scary-devil-monastery.html",
       "http://catb.org/jargon/html/L/LART.html"
     ]
@@ -2332,7 +2313,6 @@
       "http://catb.org/jargon/html/B/bogometer.html",
       "http://catb.org/jargon/html/B/bogon.html",
       "http://catb.org/jargon/html/L/Linux.html",
-      "http://www.clifton.nl/",
       "http://catb.org/jargon/html/M/MIPS.html"
     ]
   },
@@ -2550,7 +2530,6 @@
       "http://catb.org/jargon/html/I/IRC.html",
       "http://catb.org/jargon/html/M/MUD.html",
       "http://catb.org/jargon/html/N/nick.html",
-      "http://www.telefragged.com/thefatal/",
       "http://catb.org/jargon/html/S/spider.html"
     ]
   },
@@ -2766,8 +2745,7 @@
       "http://catb.org/jargon/html/B/break.html",
       "http://catb.org/jargon/html/B/breath-of-life-packet.html",
       "http://catb.org/jargon/html/M/MFTL.html",
-      "http://catb.org/jargon/html/V/VAXen.html",
-      "http://www.catb.org/retro/"
+      "http://catb.org/jargon/html/V/VAXen.html"
     ]
   },
   {
@@ -3085,8 +3063,8 @@
       "http://catb.org/jargon/html/C/COBOL.html",
       "http://catb.org/jargon/html/G/glitch.html",
       "http://catb.org/jargon/html/B/bug.html",
-      "http://catb.org/jargon/html/A/ad-hockery.html#crunchly73-10-31",
-      "http://catb.org/jargon/html/O/overflow-bit.html#crunchly73-07-24"
+      "http://catb.org/jargon/html/A/ad-hockery.html",
+      "http://catb.org/jargon/html/O/overflow-bit.html"
     ]
   },
   {
@@ -3417,9 +3395,7 @@
     "links": [
       "http://catb.org/jargon/html/C/cancelbot.html",
       "http://catb.org/jargon/html/C/candygrammar.html",
-      "http://catb.org/jargon/html/S/spam.html",
-      "mailto:moose@cm.org",
-      "http://www.cm.org/"
+      "http://catb.org/jargon/html/S/spam.html"
     ]
   },
   {
@@ -3605,8 +3581,8 @@
       "http://catb.org/jargon/html/R/ripoff.html",
       "http://catb.org/jargon/html/B/backronym.html",
       "http://catb.org/jargon/html/C/chad.html",
-      "http://catb.org/jargon/html/B/bit-bucket.html#crunchly75-10-04",
-      "http://catb.org/jargon/html/W/winged-comments.html#crunchly74-12-29"
+      "http://catb.org/jargon/html/B/bit-bucket.html",
+      "http://catb.org/jargon/html/W/winged-comments.html"
     ]
   },
   {
@@ -3795,8 +3771,7 @@
     "description": " [spamfighters] Derogatory term for a spammer.  The image that goes with it is of an overweight redneck with bad teeth living in a trailer, hunched in semi-darkness over his computer and surrounded by rotting chicken bones in half-eaten KFC buckets and empty beer cans.  See http://www.spamfaq.net/terminology.shtml#chickenboner for discussion.",
     "links": [
       "http://catb.org/jargon/html/C/chicken-head.html",
-      "http://catb.org/jargon/html/C/chiclet-keyboard.html",
-      "http://www.spamfaq.net/terminology.shtml#chickenboner"
+      "http://catb.org/jargon/html/C/chiclet-keyboard.html"
     ]
   },
   {
@@ -3922,8 +3897,7 @@
       "http://catb.org/jargon/html/C/chug.html",
       "http://catb.org/jargon/html/C/CIS.html",
       "http://catb.org/jargon/html/D/Discordianism.html",
-      "http://catb.org/jargon/html/S/slack.html",
-      "http://www.subgenius.com/"
+      "http://catb.org/jargon/html/S/slack.html"
     ]
   },
   {
@@ -4494,8 +4468,7 @@
     "description": " [very common] Edsger W. Dijkstra's note in the March 1968 Communications of the ACM, Goto Statement Considered Harmful, fired the first salvo in the structured programming wars (text at http://www.acm.org/classics/). As it  turns out, the title under which the letter appeared was actually supplied by CACM's editor, Niklaus Wirth.  Amusingly, the ACM considered the resulting acrimony sufficiently harmful that it will (by policy) no longer print an article taking so assertive a position against a coding practice. (Years afterwards, a contrary view was uttered in a CACM letter called, inevitably, ‘Goto considered harmful’ considered harmful''.  In the ensuing decades, a large number of both serious papers and parodies have borne titles of the form X considered Y.  The structured-programming wars eventually blew over with the realization that both sides were wrong, but use of such titles has remained as a persistent minor in-joke (the ‘considered silly’ found at various places in this lexicon is related).",
     "links": [
       "http://catb.org/jargon/html/C/cons.html",
-      "http://catb.org/jargon/html/C/console.html",
-      "http://www.acm.org/classics/"
+      "http://catb.org/jargon/html/C/console.html"
     ]
   },
   {
@@ -4779,7 +4752,7 @@
       "http://catb.org/jargon/html/B/bits.html",
       "http://catb.org/jargon/html/B/brain-dump.html",
       "http://catb.org/jargon/html/C/core-dump.html",
-      "http://catb.org/jargon/html/S/Stone-Age.html#crunchly76-05-01"
+      "http://catb.org/jargon/html/S/Stone-Age.html"
     ]
   },
   {
@@ -4799,8 +4772,7 @@
     "links": [
       "http://catb.org/jargon/html/C/core-leak.html",
       "http://catb.org/jargon/html/C/cosmic-rays.html",
-      "http://catb.org/jargon/html/C/core.html",
-      "http://www.koth.org/"
+      "http://catb.org/jargon/html/C/core.html"
     ]
   },
   {
@@ -4896,7 +4868,6 @@
       "http://catb.org/jargon/html/C/CP-M.html",
       "http://catb.org/jargon/html/C/crack.html",
       "http://catb.org/jargon/html/A/ADVENT.html",
-      "http://www.e-pix.com/CPUWARS/cpuwars.html",
       "http://catb.org/jargon/html/E/eat-flaming-death.html"
     ]
   },
@@ -5418,7 +5389,6 @@
       "http://catb.org/jargon/html/C/cycle-server.html",
       "http://catb.org/jargon/html/C/CNK.html",
       "http://catb.org/jargon/html/C/cyberpunk.html",
-      "mailto:cypherpunks-request@toad.com",
       "http://catb.org/jargon/html/T/tentacle.html"
     ]
   },
@@ -5429,8 +5399,7 @@
     "links": [
       "http://catb.org/jargon/html/C/cypherpunk.html",
       "http://catb.org/jargon/html/S/snarf.html",
-      "http://catb.org/jargon/html/S/scary-devil-monastery.html",
-      "http://www.lspace.org/faqs/acronym-faq.g.html"
+      "http://catb.org/jargon/html/S/scary-devil-monastery.html"
     ]
   },
   {
@@ -6016,8 +5985,7 @@
       "http://catb.org/jargon/html/D/demo.html",
       "http://catb.org/jargon/html/D/demogroup.html",
       "http://catb.org/jargon/html/C/compo.html",
-      "http://catb.org/jargon/html/C/copyparty.html",
-      "http://www.scene.org/"
+      "http://catb.org/jargon/html/C/copyparty.html"
     ]
   },
   {
@@ -6428,8 +6396,7 @@
       "http://catb.org/jargon/html/D/dodgy.html",
       "http://catb.org/jargon/html/D/dogfood.html",
       "http://catb.org/jargon/html/M/Moof.html",
-      "http://catb.org/jargon/html/R/rot13.html",
-      "http://developer.apple.com/products/techsupport/dogcow/tn31.html"
+      "http://catb.org/jargon/html/R/rot13.html"
     ]
   },
   {
@@ -6758,8 +6725,8 @@
       "http://catb.org/jargon/html/S/screaming-tty.html",
       "http://catb.org/jargon/html/F/fried.html",
       "http://catb.org/jargon/html/D/drop-outs.html",
-      "http://catb.org/jargon/html/F/fascist.html#crunchly73-05-21",
-      "http://catb.org/jargon/html/S/space-cadet-keyboard.html#crunchly73-05-19"
+      "http://catb.org/jargon/html/F/fascist.html",
+      "http://catb.org/jargon/html/S/space-cadet-keyboard.html"
     ]
   },
   {
@@ -6817,8 +6784,7 @@
     "links": [
       "http://catb.org/jargon/html/D/dub-dub-dub.html",
       "http://catb.org/jargon/html/D/dumb-terminal.html",
-      "http://catb.org/jargon/html/F/fall-through.html",
-      "http://www.lysator.liu.se/c/duffs-device.html"
+      "http://catb.org/jargon/html/F/fall-through.html"
     ]
   },
   {
@@ -7099,8 +7065,7 @@
       "http://catb.org/jargon/html/E/elvish.html",
       "http://catb.org/jargon/html/G/Good-Thing.html",
       "http://catb.org/jargon/html/A/ad-hockery.html",
-      "http://catb.org/jargon/html/A/AI-complete.html",
-      "ftp://ftp.cc.utexas.edu/pub/AI-ATTIC/Programs/Classic/Eliza/Eliza.c"
+      "http://catb.org/jargon/html/A/AI-complete.html"
     ]
   },
   {
@@ -7160,8 +7125,7 @@
       "http://catb.org/jargon/html/H/ha-ha-only-serious.html",
       "http://catb.org/jargon/html/B/bixie.html",
       "http://catb.org/jargon/html/U/Usenet.html",
-      "http://catb.org/jargon/html/E/emoticon.html",
-      "http://www.platopeople.com/emoticons.html"
+      "http://catb.org/jargon/html/E/emoticon.html"
     ]
   },
   {
@@ -7180,9 +7144,7 @@
     "description": " Any of a family of military simulations derived from a game written by Peter Langston many years ago.  A number of multi-player variants of varying degrees of sophistication exist, and one single-player version implemented for both Unix and VMS; the latter is even available as MS-DOS/Windows freeware.  All are notoriously addictive.  Of various commercial derivatives the best known is probably “Empire Deluxe” on PCs and Amigas.",
     "links": [
       "http://catb.org/jargon/html/E/EMP.html",
-      "http://catb.org/jargon/html/E/engine.html",
-      "http://www.wolfpackempire.com/infopages/History.html",
-      "http://www.empire.cx/"
+      "http://catb.org/jargon/html/E/engine.html"
     ]
   },
   {
@@ -7686,8 +7648,8 @@
       "http://catb.org/jargon/html/F/fat-electrons.html",
       "http://catb.org/jargon/html/T/tourist.html",
       "http://catb.org/jargon/html/B/bondage-and-discipline-language.html",
-      "http://catb.org/jargon/html/B/bells-and-whistles.html#crunchly73-05-28",
-      "http://catb.org/jargon/html/D/drop-outs.html#crunchly73-05-20"
+      "http://catb.org/jargon/html/B/bells-and-whistles.html",
+      "http://catb.org/jargon/html/D/drop-outs.html"
     ]
   },
   {
@@ -8419,8 +8381,8 @@
       "http://catb.org/jargon/html/F/flypage.html",
       "http://catb.org/jargon/html/D/DEC.html",
       "http://catb.org/jargon/html/F/flush.html",
-      "http://catb.org/jargon/html/S/Stone-Age.html#crunchly76-05-01",
-      "http://catb.org/jargon/html/B/batch.html#crunchly-2"
+      "http://catb.org/jargon/html/S/Stone-Age.html",
+      "http://catb.org/jargon/html/B/batch.html"
     ]
   },
   {
@@ -8545,7 +8507,6 @@
       "http://catb.org/jargon/html/X/xyzzy.html",
       "http://catb.org/jargon/html/T/thud.html",
       "http://catb.org/jargon/html/F/FUBAR.html",
-      "http://members.aol.com/EOCostello/",
       "http://catb.org/jargon/html/K/kluge.html",
       "http://catb.org/jargon/html/K/kludge.html",
       "http://catb.org/jargon/html/B/backronym.html",
@@ -8636,7 +8597,16 @@
       "http://catb.org/jargon/html/U/user-friendly.html"
     ]
   },
-
+  {
+    "name": "for values of",
+    "url": "http://catb.org/jargon/html/F/for-values-of.html",
+    "description": " [MIT] A common rhetorical maneuver at MIT is to use any of the canonical random numbers as placeholders for variables.  “The max function takes 42 arguments, for arbitrary values of 42.:” “There are 69 ways to leave your lover, for 69 = 50.” This is especially likely when the speaker has uttered a random number and realizes that it was not recognized as such, but even ‘non-random’ numbers are occasionally used in this fashion.  A related joke is that π equals 3 — for small values of π and large values of 3.",
+    "links": [
+      "http://catb.org/jargon/html/F/for-the-rest-of-us.html",
+      "http://catb.org/jargon/html/F/fora.html",
+      "http://catb.org/jargon/html/R/random-numbers.html"
+    ]
+  },
   {
     "name": "fora",
     "url": "http://catb.org/jargon/html/F/fora.html",
@@ -8697,7 +8667,6 @@
     "links": [
       "http://catb.org/jargon/html/F/forked.html",
       "http://catb.org/jargon/html/F/Fortrash.html",
-      "news:alt.usenet.kooks",
       "http://catb.org/jargon/html/G/Godwins-Law.html"
     ]
   },
@@ -8940,7 +8909,6 @@
       "http://catb.org/jargon/html/F/frog.html",
       "http://catb.org/jargon/html/F/frob.html",
       "http://catb.org/jargon/html/Z/Zork.html",
-      "http://www.everything2.com/index.pl?node=Encyclopedia%20Frobozzica&lastnode-id=585787",
       "http://catb.org/jargon/html/T/TMRC.html"
     ]
   },
@@ -9092,9 +9060,7 @@
       "http://catb.org/jargon/html/F/FUD-wars.html",
       "http://catb.org/jargon/html/I/IBM.html",
       "http://catb.org/jargon/html/M/Microsoft.html",
-      "http://catb.org/jargon/html/L/Linux.html",
-      "http://www.groklaw.net/article.php?story=20031024191141102",
-      "http://www.catb.org/~esr/sco.html"
+      "http://catb.org/jargon/html/L/Linux.html"
     ]
   },
   {
@@ -9349,7 +9315,6 @@
       "http://catb.org/jargon/html/G/geek-code.html",
       "http://catb.org/jargon/html/N/neophilia.html",
       "http://catb.org/jargon/html/H/hacker.html",
-      "http://www.darkwater.com/omni/geek.html",
       "http://catb.org/jargon/html/P/propeller-head.html",
       "http://catb.org/jargon/html/C/clustergeeking.html",
       "http://catb.org/jargon/html/G/geek-out.html",
@@ -9368,7 +9333,6 @@
       "http://catb.org/jargon/html/G/geek.html",
       "http://catb.org/jargon/html/G/geek-out.html",
       "http://catb.org/jargon/html/S/sig-block.html",
-      "http://www.geekcode.com/",
       "http://catb.org/jargon/html/N/newsgroup.html"
     ]
   },
@@ -9488,8 +9452,7 @@
       "http://catb.org/jargon/html/G/Get-a-real-computer-.html",
       "http://catb.org/jargon/html/G/gib.html",
       "http://catb.org/jargon/html/O/open-source.html",
-      "http://catb.org/jargon/html/L/Linux.html",
-      "http://www.fas.org/nuke/guide/usa/c3i/defcon.htm"
+      "http://catb.org/jargon/html/L/Linux.html"
     ]
   },
   {
@@ -9652,8 +9615,8 @@
       "http://catb.org/jargon/html/R/random.html",
       "http://catb.org/jargon/html/H/heisenbug.html",
       "http://catb.org/jargon/html/G/glitch.html",
-      "http://catb.org/jargon/html/O/overflow-bit.html#crunchly73-07-24",
-      "http://catb.org/jargon/html/B/bells-and-whistles.html#crunchly73-05-28"
+      "http://catb.org/jargon/html/O/overflow-bit.html",
+      "http://catb.org/jargon/html/B/bells-and-whistles.html"
     ]
   },
   {
@@ -9711,12 +9674,10 @@
       "http://catb.org/jargon/html/G/gnarly.html",
       "http://catb.org/jargon/html/G/gnubie.html",
       "http://catb.org/jargon/html/R/recursive-acronym.html",
-      "http://www.gnu.org/",
       "http://catb.org/jargon/html/E/EMACS.html",
       "http://catb.org/jargon/html/C/copyleft.html",
       "http://catb.org/jargon/html/G/General-Public-Virus.html",
-      "http://catb.org/jargon/html/L/Linux.html",
-      "mailto:gnu@toad.com"
+      "http://catb.org/jargon/html/L/Linux.html"
     ]
   },
   {
@@ -9818,7 +9779,6 @@
     "links": [
       "http://catb.org/jargon/html/G/gobble.html",
       "http://catb.org/jargon/html/G/Godzillagram.html",
-      "http://www.wired.com/wired/archive/2.10/godwin.if_pr.html",
       "http://catb.org/jargon/html/F/Formosas-Law.html"
     ]
   },
@@ -9873,13 +9833,33 @@
     ]
   },
   {
+    "name": "gonzo",
+    "url": "http://catb.org/jargon/html/G/gonzo.html",
+    "description": " [from Hunter S. Thompson]",
+    "links": [
+      "http://catb.org/jargon/html/G/gonkulator.html",
+      "http://catb.org/jargon/html/G/Good-Thing.html",
+      "http://catb.org/jargon/html/M/moby.html",
+      "http://catb.org/jargon/html/H/hairy.html"
+    ]
+  },
+  {
+    "name": "Good Thing",
+    "url": "http://catb.org/jargon/html/G/Good-Thing.html",
+    "description": " [very common; always pronounced as if capitalized. Orig. fr. the 1930 Sellar & Yeatman parody of British history 1066 And All That, but well-established among hackers in the U.S. as well.] ",
+    "links": [
+      "http://catb.org/jargon/html/G/gonzo.html",
+      "http://catb.org/jargon/html/G/google.html",
+      "http://catb.org/jargon/html/B/Bad-Thing.html"
+    ]
+  },
+  {
     "name": "google",
     "url": "http://catb.org/jargon/html/G/google.html",
     "description": " [common] To search the Web using the Google search engine, http://www.google.com.  Google is highly esteemed among hackers for its significance ranking system, which is so uncannily effective that many hackers consider it to have rendered other search engines effectively irrelevant.  The name ‘google’ has additional flavor for hackers because most know that it was copied from a mathematical term for ten to the 100th power, famously first uttered as ‘googol’ by a mathematician's nine-year-old nephew.",
     "links": [
       "http://catb.org/jargon/html/G/Good-Thing.html",
-      "http://catb.org/jargon/html/G/google-juice.html",
-      "http://www.google.com/"
+      "http://catb.org/jargon/html/G/google-juice.html"
     ]
   },
   {
@@ -10664,8 +10644,7 @@
       "http://catb.org/jargon/html/H/hakspek.html",
       "http://catb.org/jargon/html/P/PDP-10.html",
       "http://catb.org/jargon/html/D/Dissociated-Press.html",
-      "http://catb.org/jargon/html/B/banana-problem.html",
-      "http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html"
+      "http://catb.org/jargon/html/B/banana-problem.html"
     ]
   },
   {
@@ -10687,7 +10666,6 @@
       "http://catb.org/jargon/html/H/hakspek.html",
       "http://catb.org/jargon/html/H/ham.html",
       "http://catb.org/jargon/html/E/Evil-Empire.html",
-      "http://www.opensource.org/halloween/",
       "http://catb.org/jargon/html/L/Linux.html"
     ]
   },
@@ -11353,8 +11331,7 @@
     "description": " Broken.  Confused.  Trashed.  Now common; seems to be post-1995. There is an entertaining web page of related definitions, few of which seem to be in live use but many of which would be in the recognition vocabulary of anyone familiar with the adjective.",
     "links": [
       "http://catb.org/jargon/html/H/hop.html",
-      "http://catb.org/jargon/html/H/hose.html",
-      "http://www.syddware.com/hork.html"
+      "http://catb.org/jargon/html/H/hose.html"
     ]
   },
   {
@@ -11535,8 +11512,7 @@
     "description": "Variants of this phrase with various values of X came into common use in 2002-2003, generally used to suggest that whatever party referred to as the new overlords is deeply evil.  In the original Simpsons episode (#96, Homer In Space) X = “insect” and th line is part of a speech in which a smarmy newscaster expresses his willingness to collaborate with an invading race of giant space ants.",
     "links": [
       "http://catb.org/jargon/html/I/I-see-no-X-here-.html",
-      "http://catb.org/jargon/html/I/IANAL.html",
-      "http://www.tvtome.com/tvtome/servlet/GuidePageServlet/showid-146/epid-1381/"
+      "http://catb.org/jargon/html/I/IANAL.html"
     ]
   },
   {
@@ -11745,8 +11721,7 @@
     "description": " [] A fiendishly clever ASCII display hack that became a brief fad in 1993-1994; it used combinations of tabs and spaces to produce an analog indicator of the amount of indentation an included portion of a reply had undergone.  The full story is at http://world.std.com/~mmcirvin/indent.html.",
     "links": [
       "http://catb.org/jargon/html/I/indent-style.html",
-      "http://catb.org/jargon/html/I/index-of-X.html",
-      "http://world.std.com/~mmcirvin/indent.html"
+      "http://catb.org/jargon/html/I/index-of-X.html"
     ]
   },
   {
@@ -11805,8 +11780,7 @@
       "http://catb.org/jargon/html/B/brute-force.html",
       "http://catb.org/jargon/html/O/one-banana-problem.html",
       "http://catb.org/jargon/html/L/Linux.html",
-      "http://catb.org/jargon/html/B/bazaar.html",
-      "http://www.ietf.org/rfc/rfc2795.txt"
+      "http://catb.org/jargon/html/B/bazaar.html"
     ]
   },
   {
@@ -11835,8 +11809,7 @@
     "links": [
       "http://catb.org/jargon/html/I/inflate.html",
       "http://catb.org/jargon/html/I/initgame.html",
-      "http://catb.org/jargon/html/Z/Zork.html",
-      "http://www.csd.uwo.ca/Infocom/"
+      "http://catb.org/jargon/html/Z/Zork.html"
     ]
   },
   {
@@ -12103,7 +12076,6 @@
       "http://catb.org/jargon/html/I/Itanic.html",
       "http://catb.org/jargon/html/I/IWBNI.html",
       "http://catb.org/jargon/html/H/high-moby.html",
-      "http://www.its.os.org/",
       "http://catb.org/jargon/html/T/troglodyte.html",
       "http://catb.org/jargon/html/U/Unix.html",
       "http://catb.org/jargon/html/H/holy-wars.html",
@@ -12199,8 +12171,7 @@
       "http://catb.org/jargon/html/B/barf.html",
       "http://catb.org/jargon/html/C/COBOL.html",
       "http://catb.org/jargon/html/I/IBM.html",
-      "http://catb.org/jargon/html/F/fear-and-loathing.html",
-      "http://www.catb.org/retro/"
+      "http://catb.org/jargon/html/F/fear-and-loathing.html"
     ]
   },
   {
@@ -12223,7 +12194,6 @@
       "http://catb.org/jargon/html/J/jello.html",
       "http://catb.org/jargon/html/B/B1FF.html",
       "http://catb.org/jargon/html/S/script-kiddies.html",
-      "http://www.somethingawful.com/jeffk/",
       "http://catb.org/jargon/html/S/studlycaps.html",
       "http://catb.org/jargon/html/W/warez-d00dz.html",
       "http://catb.org/jargon/html/L/luser.html",
@@ -12258,8 +12228,7 @@
     "links": [
       "http://catb.org/jargon/html/J/Jeopardy-style-quoting.html",
       "http://catb.org/jargon/html/J/jiffy.html",
-      "http://catb.org/jargon/html/G/gorets.html",
-      "http://www.jibble.org/jibblemeaning.php"
+      "http://catb.org/jargon/html/G/gorets.html"
     ]
   },
   {
@@ -12312,8 +12281,7 @@
     "description": "A spam run forged to appear as though it came from an innocent party, who is then generally flooded by the bounces; or, the act of performing such a run. The original incident is described here.",
     "links": [
       "http://catb.org/jargon/html/J/joe-code.html",
-      "http://catb.org/jargon/html/J/juggling-eggs.html",
-      "http://www.everything2.com/index.pl?node=Joe%20Job"
+      "http://catb.org/jargon/html/J/juggling-eggs.html"
     ]
   },
   {
@@ -12469,8 +12437,7 @@
       "http://catb.org/jargon/html/K/kgbvax.html",
       "http://catb.org/jargon/html/K/kiboze.html",
       "http://catb.org/jargon/html/G/GIGO.html",
-      "http://catb.org/jargon/html/S/SNAFU-principle.html",
-      "http://www.kibo.com/"
+      "http://catb.org/jargon/html/S/SNAFU-principle.html"
     ]
   },
   {
@@ -12713,8 +12680,7 @@
       "http://catb.org/jargon/html/K/knurd.html",
       "http://catb.org/jargon/html/K/koan.html",
       "http://catb.org/jargon/html/T/the-literature.html",
-      "http://catb.org/jargon/html/B/bible.html",
-      "http://sunburn.stanford.edu/~knuth/"
+      "http://catb.org/jargon/html/B/bible.html"
     ]
   },
   {
@@ -12735,8 +12701,7 @@
     "links": [
       "http://catb.org/jargon/html/K/koan.html",
       "http://catb.org/jargon/html/K/Kool-Aid.html",
-      "http://catb.org/jargon/html/T/troll.html",
-      "http://www.crank.net/usenet.html"
+      "http://catb.org/jargon/html/T/troll.html"
     ]
   },
   {
@@ -12745,8 +12710,7 @@
     "description": " [from a kid's sugar-enriched drink in fruity flavors] When someone who should know better succumbs to marketing influences and actually begins to believe the propaganda being dished out by a vendor, they are said to have drunk the Kool-Aid.  Usually the decortication process is slow and almost unnoticeable until one day the victim emerges as a True Believer and begins spreading the faith himself.  The term originates in the suicide of 914 followers of Jim Jones's People's Temple cult in Guyana in 1978 (there are also resonances with Ken Kesey's Electric Kool-Aid Acid Tests from the 1960s).  What the Jonestown victims actually drank was cyanide-laced Flavor-Aid, a cheap knockoff, rather than Kool-Aid itself.  There is a FAQ on this topic.",
     "links": [
       "http://catb.org/jargon/html/K/kook.html",
-      "http://catb.org/jargon/html/K/kremvax.html",
-      "http://www.cs.uu.nl/wais/html/na-dir/food/kool-aid-faq.html"
+      "http://catb.org/jargon/html/K/kremvax.html"
     ]
   },
   {
@@ -12758,7 +12722,6 @@
       "http://catb.org/jargon/html/K/kyrka.html",
       "http://catb.org/jargon/html/U/Usenet.html",
       "http://catb.org/jargon/html/V/VAXen.html",
-      "http://groups.google.com/groups?selm=0001%40kremvax.UUCP",
       "http://catb.org/jargon/html/K/kgbvax.html"
     ]
   },
@@ -12974,7 +12937,6 @@
     "links": [
       "http://catb.org/jargon/html/L/legalese.html",
       "http://catb.org/jargon/html/L/LER.html",
-      "http://www.lenna.org/",
       "http://catb.org/jargon/html/U/Utah-teapot.html",
       "http://catb.org/jargon/html/S/Stanford-Bunny.html"
     ]
@@ -13041,8 +13003,6 @@
       "http://catb.org/jargon/html/L/lexer.html",
       "http://catb.org/jargon/html/L/Life-is-hard.html",
       "http://catb.org/jargon/html/T/TECO.html",
-      "http://dmoz.org/Computers/Artificial_Life/Cellular_Automata/Conway%27s_Game_of_Life/",
-      "http://www.argentum.freeserve.co.uk/lex_home.htm",
       "http://catb.org/jargon/html/U/Usenet.html",
       "http://catb.org/jargon/html/G/Get-a-life-.html"
     ]
@@ -13555,7 +13515,6 @@
       "http://catb.org/jargon/html/L/Lubarskys-Law-of-Cybernetic-Entomology.html",
       "http://catb.org/jargon/html/L/lunatic-fringe.html",
       "http://catb.org/jargon/html/S/spam.html",
-      "http://come.to/the.lumber.cartel/",
       "http://catb.org/jargon/html/T/TINC.html",
       "http://catb.org/jargon/html/B/backbone-cabal.html",
       "http://catb.org/jargon/html/N/NANA.html"
@@ -14024,7 +13983,7 @@
       "http://catb.org/jargon/html/N/numbers.html",
       "http://catb.org/jargon/html/S/social-science-number.html",
       "http://catb.org/jargon/html/M/math-out.html",
-      "http://catb.org/jargon/html/S/space-cadet-keyboard.html#crunchly73-05-19"
+      "http://catb.org/jargon/html/S/space-cadet-keyboard.html"
     ]
   },
   {
@@ -14040,7 +13999,6 @@
       "http://catb.org/jargon/html/C/cypherpunk.html"
     ]
   },
-
   {
     "name": "maximum Maytag mode",
     "url": "http://catb.org/jargon/html/M/maximum-Maytag-mode.html",
@@ -14695,7 +14653,6 @@
     "links": [
       "http://catb.org/jargon/html/M/monstrosity.html",
       "http://catb.org/jargon/html/M/Moof.html",
-      "http://www.worldwidewords.org/articles/monty.htm",
       "http://catb.org/jargon/html/M/moby.html"
     ]
   },
@@ -14716,7 +14673,6 @@
     "links": [
       "http://catb.org/jargon/html/M/Moof.html",
       "http://catb.org/jargon/html/M/moria.html",
-      "http://firstmonday.org/issues/issue7_11/tuomi/index.html",
       "http://catb.org/jargon/html/P/Parkinsons-Law-of-Data.html",
       "http://catb.org/jargon/html/G/Gatess-Law.html"
     ]
@@ -14913,8 +14869,7 @@
       "http://catb.org/jargon/html/S/second-system-effect.html",
       "http://catb.org/jargon/html/U/Unix.html",
       "http://catb.org/jargon/html/B/brain-damaged.html",
-      "http://catb.org/jargon/html/G/GCOS.html",
-      "http://www.stratus.com/pub/vos/multics/tvv/multics.html"
+      "http://catb.org/jargon/html/G/GCOS.html"
     ]
   },
   {
@@ -15249,7 +15204,6 @@
     "links": [
       "http://catb.org/jargon/html/N/nanofortnight.html",
       "http://catb.org/jargon/html/N/narg.html",
-      "http://www.foresight.org/EOC/index.html",
       "http://catb.org/jargon/html/B/blue-goo.html",
       "http://catb.org/jargon/html/G/gray-goo.html",
       "http://catb.org/jargon/html/N/nanobot.html"
@@ -15270,8 +15224,7 @@
     "description": " Recognized shorthand on the Usenet group comp.std.c for any unexpected behavior of a C compiler on encountering an undefined construct.  During a discussion on that group in early 1992, a regular remarked “When the compiler encounters [a given undefined construct] it is legal for it to make demons fly out of your nose” (the implication is that the compiler may choose any arbitrarily bizarre way to interpret the code without violating the ANSI C standard).  Someone else followed up with a reference to “nasal demons”, which quickly became established.  The original post is web-accessible at http://groups.google.com/groups?hl=en&selm=10195%40ksr.com.",
     "links": [
       "http://catb.org/jargon/html/N/narg.html",
-      "http://catb.org/jargon/html/N/nastygram.html",
-      "http://groups.google.com/groups?hl=en&selm=10195%40ksr.com"
+      "http://catb.org/jargon/html/N/nastygram.html"
     ]
   },
   {
@@ -15452,7 +15405,6 @@
       "http://catb.org/jargon/html/N/netiquette.html",
       "http://catb.org/jargon/html/R/rogue.html",
       "http://catb.org/jargon/html/U/Usenet.html",
-      "http://www.nethack.org/",
       "http://catb.org/jargon/html/M/moria.html",
       "http://catb.org/jargon/html/A/Angband.html"
     ]
@@ -15890,8 +15842,8 @@
       "http://catb.org/jargon/html/P/pretty-pictures.html",
       "http://catb.org/jargon/html/C/crunch.html",
       "http://catb.org/jargon/html/N/number-crunching.html",
-      "http://catb.org/jargon/html/W/winged-comments.html#crunchly74-12-29",
-      "http://catb.org/jargon/html/W/water-MIPS.html#crunchly74-08-18"
+      "http://catb.org/jargon/html/W/winged-comments.html",
+      "http://catb.org/jargon/html/W/water-MIPS.html"
     ]
   },
   {
@@ -15967,8 +15919,7 @@
     "links": [
       "http://catb.org/jargon/html/O/Ob-.html",
       "http://catb.org/jargon/html/O/obi-wan-error.html",
-      "http://catb.org/jargon/html/H/hello-world.html",
-      "http://www.ioccc.org/"
+      "http://catb.org/jargon/html/H/hello-world.html"
     ]
   },
   {
@@ -16186,7 +16137,6 @@
       "http://catb.org/jargon/html/O/open-switch.html",
       "http://catb.org/jargon/html/S/suit.html",
       "http://catb.org/jargon/html/F/free-software.html",
-      "http://www.opensource.org/",
       "http://catb.org/jargon/html/L/Linux.html"
     ]
   },
@@ -16413,8 +16363,8 @@
       "http://catb.org/jargon/html/F/flag.html",
       "http://catb.org/jargon/html/B/baroque.html",
       "http://catb.org/jargon/html/O/overflow-bit.html",
-      "http://catb.org/jargon/html/B/bug.html#crunchly73-07-29",
-      "http://catb.org/jargon/html/G/glitch.html#crunchly73-06-04"
+      "http://catb.org/jargon/html/B/bug.html",
+      "http://catb.org/jargon/html/G/glitch.html"
     ]
   },
   {
@@ -16614,7 +16564,6 @@
       "http://catb.org/jargon/html/P/PascalCasing.html",
       "http://catb.org/jargon/html/B/bondage-and-discipline-language.html",
       "http://catb.org/jargon/html/K/K-ampersand-R.html",
-      "http://www.lysator.liu.se/c/bwk-on-pascal.html",
       "http://catb.org/jargon/html/C/C.html"
     ]
   },
@@ -16748,8 +16697,7 @@
       "http://catb.org/jargon/html/E/EXCH.html",
       "http://catb.org/jargon/html/H/HAKMEM.html",
       "http://catb.org/jargon/html/P/pop.html",
-      "http://catb.org/jargon/html/P/push.html",
-      "http://www.inwap.com/pdp10/"
+      "http://catb.org/jargon/html/P/push.html"
     ]
   },
   {
@@ -17067,8 +17015,7 @@
       "http://catb.org/jargon/html/A/ACK.html",
       "http://catb.org/jargon/html/E/ENQ.html",
       "http://catb.org/jargon/html/M/mailing-list.html",
-      "http://catb.org/jargon/html/B/blargh.html",
-      "http://groups.google.com/groups?selm=1991Jan23.211609.877%40news.cs.indiana.edu"
+      "http://catb.org/jargon/html/B/blargh.html"
     ]
   },
   {
@@ -17079,7 +17026,6 @@
       "http://catb.org/jargon/html/P/ping.html",
       "http://catb.org/jargon/html/P/ping-storm.html",
       "http://catb.org/jargon/html/E/exploit.html",
-      "http://www.insecure.org/sploits/ping-o-death.html",
       "http://catb.org/jargon/html/K/kamikaze-packet.html"
     ]
   },
@@ -17973,7 +17919,6 @@
       "http://catb.org/jargon/html/P/Perl.html",
       "http://catb.org/jargon/html/B/BSD.html",
       "http://catb.org/jargon/html/L/Linux.html",
-      "http://www.python.org/",
       "http://catb.org/jargon/html/G/Guido.html",
       "http://catb.org/jargon/html/B/BDFL.html"
     ]
@@ -18074,8 +18019,7 @@
     "links": [
       "http://catb.org/jargon/html/Q/quick-and-dirty.html",
       "http://catb.org/jargon/html/Q/Quirk-objection.html",
-      "http://catb.org/jargon/html/O/Obfuscated-C-Contest.html",
-      "http://www.nyx.org/~gthompso/quine.htm"
+      "http://catb.org/jargon/html/O/Obfuscated-C-Contest.html"
     ]
   },
   {
@@ -18146,8 +18090,7 @@
       "http://catb.org/jargon/html/Q/qux.html",
       "http://catb.org/jargon/html/S/space-cadet-keyboard.html",
       "http://catb.org/jargon/html/F/fossil.html",
-      "http://catb.org/jargon/html/D/demo.html",
-      "http://reason.com/9606/Fe.QWERTY.html"
+      "http://catb.org/jargon/html/D/demo.html"
     ]
   },
   {
@@ -18183,8 +18126,7 @@
     "links": [
       "http://catb.org/jargon/html/R/rain-dance.html",
       "http://catb.org/jargon/html/R/random.html",
-      "http://catb.org/jargon/html/O/Orange-Book.html",
-      "http://www.radium.ncsc.mil/tpep/library/rainbow/"
+      "http://catb.org/jargon/html/O/Orange-Book.html"
     ]
   },
   {
@@ -18218,7 +18160,6 @@
       "http://catb.org/jargon/html/R/Random-Number-God.html",
       "http://catb.org/jargon/html/R/randomness.html",
       "http://catb.org/jargon/html/N/N.html",
-      "http://www.vinc17.org/yp17_eng.html",
       "http://catb.org/jargon/html/D/Discordianism.html",
       "http://catb.org/jargon/html/F/for-values-of.html"
     ]
@@ -18231,9 +18172,7 @@
       "http://catb.org/jargon/html/R/random-numbers.html",
       "http://catb.org/jargon/html/R/rape.html",
       "http://catb.org/jargon/html/H/hack.html",
-      "http://catb.org/jargon/html/C/crock.html",
-      "http://www.fourmilab.ch/hotbits/",
-      "http://lavarnd.org/"
+      "http://catb.org/jargon/html/C/crock.html"
     ]
   },
   {
@@ -18378,8 +18317,7 @@
     "links": [
       "http://catb.org/jargon/html/R/raw-mode.html",
       "http://catb.org/jargon/html/R/rc-file.html",
-      "http://catb.org/jargon/html/S/spam.html",
-      "http://mail-abuse.org/rbl/usage.html"
+      "http://catb.org/jargon/html/S/spam.html"
     ]
   },
   {
@@ -18776,8 +18714,7 @@
       "http://catb.org/jargon/html/I/INTERCAL.html",
       "http://catb.org/jargon/html/J/JCL.html",
       "http://catb.org/jargon/html/P/PDP-11.html",
-      "http://catb.org/jargon/html/Z/Zork.html",
-      "http://www.catb.org/retro/"
+      "http://catb.org/jargon/html/Z/Zork.html"
     ]
   },
   {
@@ -20038,8 +19975,7 @@
       "http://catb.org/jargon/html/S/SIG.html",
       "http://catb.org/jargon/html/R/Random-Number-God.html",
       "http://catb.org/jargon/html/P/ping.html",
-      "http://catb.org/jargon/html/K/kremvax.html",
-      "http://www.shub-internet.org/"
+      "http://catb.org/jargon/html/K/kremvax.html"
     ]
   },
   {
@@ -20223,7 +20159,6 @@
     "links": [
       "http://catb.org/jargon/html/S/slash.html",
       "http://catb.org/jargon/html/S/sleep.html",
-      "http://slashdot.org/",
       "http://catb.org/jargon/html/F/flash-crowd.html",
       "http://catb.org/jargon/html/D/DoS-attack.html"
     ]
@@ -20783,10 +20718,9 @@
       "http://catb.org/jargon/html/D/double-bucky.html",
       "http://catb.org/jargon/html/M/meta-bit.html",
       "http://catb.org/jargon/html/Q/quadruple-bucky.html",
-      "http://screenshots.sourceforge.net/misc/SpaceCadet.html",
       "http://catb.org/jargon/html/S/space-cadet-keyboard.html",
-      "http://catb.org/jargon/html/D/drop-outs.html#crunchly73-05-20",
-      "http://catb.org/jargon/html/M/math-out.html#crunchly73-05-18"
+      "http://catb.org/jargon/html/D/drop-outs.html",
+      "http://catb.org/jargon/html/M/math-out.html"
     ]
   },
   {
@@ -20844,8 +20778,7 @@
       "http://catb.org/jargon/html/J/jello.html",
       "http://catb.org/jargon/html/U/UCE.html",
       "http://catb.org/jargon/html/U/UBE.html",
-      "http://catb.org/jargon/html/L/luser.html",
-      "http://www.spam.com/ci/ci_in.htm"
+      "http://catb.org/jargon/html/L/luser.html"
     ]
   },
   {
@@ -20866,8 +20799,6 @@
     "links": [
       "http://catb.org/jargon/html/S/spam-bait.html",
       "http://catb.org/jargon/html/S/spamhaus.html",
-      "mailto:jrandom@hacker.org",
-      "mailto:jrandom@NOSPAM.hacker.org",
       "http://catb.org/jargon/html/M/munge.html",
       "http://catb.org/jargon/html/A/address-harvester.html"
     ]
@@ -20880,7 +20811,6 @@
       "http://catb.org/jargon/html/S/spamblock.html",
       "http://catb.org/jargon/html/S/spamvertize.html",
       "http://catb.org/jargon/html/S/spam.html",
-      "http://www.spamhaus.org/",
       "http://catb.org/jargon/html/R/relay-rape.html",
       "http://catb.org/jargon/html/T/throwaway-account.html"
     ]
@@ -21351,8 +21281,8 @@
       "http://catb.org/jargon/html/I/Iron-Age.html",
       "http://catb.org/jargon/html/C/core.html",
       "http://catb.org/jargon/html/S/Stone-Age.html",
-      "http://catb.org/jargon/html/C/core-dump.html#crunchly76-07-18",
-      "http://catb.org/jargon/html/F/flush.html#crunchly-5678"
+      "http://catb.org/jargon/html/C/core-dump.html",
+      "http://catb.org/jargon/html/F/flush.html"
     ]
   },
   {
@@ -22494,7 +22424,6 @@
       "http://catb.org/jargon/html/T/times-or-divided-by.html",
       "http://catb.org/jargon/html/T/TINC.html",
       "http://catb.org/jargon/html/L/LISP.html",
-      "http://www-formal.stanford.edu/jmc/history/timesharing/timesharing.html",
       "http://catb.org/jargon/html/C/CTSS.html",
       "http://catb.org/jargon/html/D/DEC.html",
       "http://catb.org/jargon/html/V/VAX.html",
@@ -22581,9 +22510,7 @@
       "http://catb.org/jargon/html/F/foo.html",
       "http://catb.org/jargon/html/M/mung.html",
       "http://catb.org/jargon/html/F/frob.html",
-      "http://catb.org/jargon/html/S/scram-switch.html",
-      "http://tmrc-www.mit.edu/",
-      "http://tmrc-www.mit.edu/dictionary.html"
+      "http://catb.org/jargon/html/S/scram-switch.html"
     ]
   },
   {
@@ -23198,8 +23125,7 @@
     "links": [
       "http://catb.org/jargon/html/T/turist.html",
       "http://catb.org/jargon/html/T/tweak.html",
-      "http://catb.org/jargon/html/L/Linux.html",
-      "http://www.sjbaker.org/tux/"
+      "http://catb.org/jargon/html/L/Linux.html"
     ]
   },
   {
@@ -23227,8 +23153,7 @@
       "http://catb.org/jargon/html/I/ITS.html",
       "http://catb.org/jargon/html/W/WAITS.html",
       "http://catb.org/jargon/html/V/VAX.html",
-      "http://catb.org/jargon/html/V/VMS.html",
-      "http://panda.com/tops-20/"
+      "http://catb.org/jargon/html/V/VMS.html"
     ]
   },
   {
@@ -23665,7 +23590,6 @@
     "links": [
       "http://catb.org/jargon/html/U/userland.html",
       "http://catb.org/jargon/html/U/UTSL.html",
-      "http://www.sjbaker.org/teapot/",
       "http://catb.org/jargon/html/L/lenna.html",
       "http://catb.org/jargon/html/S/Stanford-Bunny.html"
     ]
@@ -24308,8 +24232,7 @@
     "description": " [play on war dialer; also as single word wardriving] Driving around looking for unsecured wireless Internet access points to connect to.  More at the War Driving home page. Compare war-chalking.",
     "links": [
       "http://catb.org/jargon/html/W/war-dialer.html",
-      "http://catb.org/jargon/html/W/war-chalking.html",
-      "http://www.personaltelco.net/index.cgi/WarDriving"
+      "http://catb.org/jargon/html/W/war-chalking.html"
     ]
   },
   {
@@ -24318,8 +24241,7 @@
     "description": "[play on war-driving; the first syllable has since been reinterpreted as an acronym for “wireless access revolution”] The practice of using chalk marks similar to hobo signs to indicate the nearby presence of a wireless Internet access point, a boon to strolling hackers with laptops.  The concept was first floated in early 2002 and was instantly seized upon with cries of glee by hackers all over the portions of the world urbanized enough to have sidewalks and access points.  The process rather recalls the explosive spread of heraldry in the medieval Europe of the 1120s. There is a site that explains the symbology;.",
     "links": [
       "http://catb.org/jargon/html/W/war-driving.html",
-      "http://catb.org/jargon/html/W/suffix-ware.html",
-      "http://www.warchalking.org/"
+      "http://catb.org/jargon/html/W/suffix-ware.html"
     ]
   },
   {
@@ -24437,8 +24359,8 @@
       "http://catb.org/jargon/html/W/washing-software.html",
       "http://catb.org/jargon/html/W/walking-drives.html",
       "http://catb.org/jargon/html/H/hose.html",
-      "http://catb.org/jargon/html/B/batch.html#crunchly-2",
-      "http://catb.org/jargon/html/B/bit-bucket.html#crunchly75-10-04"
+      "http://catb.org/jargon/html/B/batch.html",
+      "http://catb.org/jargon/html/B/bit-bucket.html"
     ]
   },
   {
@@ -24460,8 +24382,8 @@
       "http://catb.org/jargon/html/M/MIPS.html",
       "http://catb.org/jargon/html/M/mainframe.html",
       "http://catb.org/jargon/html/W/water-MIPS.html",
-      "http://catb.org/jargon/html/N/number-crunching.html#crunchly74-12-25",
-      "http://catb.org/jargon/html/A/ad-hockery.html#crunchly73-10-31"
+      "http://catb.org/jargon/html/N/number-crunching.html",
+      "http://catb.org/jargon/html/A/ad-hockery.html"
     ]
   },
   {
@@ -24943,8 +24865,8 @@
       "http://catb.org/jargon/html/W/Windoze.html",
       "http://catb.org/jargon/html/W/winkey.html",
       "http://catb.org/jargon/html/B/boxed-comments.html",
-      "http://catb.org/jargon/html/B/bit-bucket.html#crunchly75-10-04",
-      "http://catb.org/jargon/html/N/number-crunching.html#crunchly74-12-25"
+      "http://catb.org/jargon/html/B/bit-bucket.html",
+      "http://catb.org/jargon/html/N/number-crunching.html"
     ]
   },
   {
@@ -25095,8 +25017,7 @@
       "http://catb.org/jargon/html/W/wizard.html",
       "http://catb.org/jargon/html/W/wizard-hat.html",
       "http://catb.org/jargon/html/B/bible.html",
-      "http://catb.org/jargon/html/P/Purple-Book.html",
-      "http://mitpress.mit.edu/sicp/"
+      "http://catb.org/jargon/html/P/Purple-Book.html"
     ]
   },
   {
@@ -25319,8 +25240,7 @@
       "http://catb.org/jargon/html/W/wugga-wugga.html",
       "http://catb.org/jargon/html/W/WYSIAYG.html",
       "http://catb.org/jargon/html/A/ADVENT.html",
-      "http://catb.org/jargon/html/Z/Zork.html",
-      "http://www.catb.org/retro/"
+      "http://catb.org/jargon/html/Z/Zork.html"
     ]
   },
   {
@@ -25424,8 +25344,7 @@
       "http://catb.org/jargon/html/C/canonical.html",
       "http://catb.org/jargon/html/A/ADVENT.html",
       "http://catb.org/jargon/html/M/magic.html",
-      "http://catb.org/jargon/html/E/Easter-egg.html",
-      "ftp://metalab.unc.edu/pub/docs/books/gutenberg/etext93/wizoz10.txt"
+      "http://catb.org/jargon/html/E/Easter-egg.html"
     ]
   },
   {
@@ -25546,8 +25465,7 @@
     "links": [
       "http://catb.org/jargon/html/Y/YMMV.html",
       "http://catb.org/jargon/html/Y/You-know-you-ve-been-hacking-too-long-when.html",
-      "http://catb.org/jargon/html/M/magic.html",
-      "http://cm.bell-labs.com/cm/cs/who/dmr/odd.html"
+      "http://catb.org/jargon/html/M/magic.html"
     ]
   },
   {
@@ -25754,9 +25672,7 @@
       "http://catb.org/jargon/html/A/ADVENT.html",
       "http://catb.org/jargon/html/R/retrocomputing.html",
       "http://catb.org/jargon/html/I/Infocom.html",
-      "http://www.ifarchive.org/",
-      "http://catb.org/jargon/html/G/grue.html",
-      "http://www.forkexec.com/html/play-zork1.html"
+      "http://catb.org/jargon/html/G/grue.html"
     ]
   },
   {

@@ -24,7 +24,11 @@ const getEntries = async url => {
     // Removing pages which are not a definition
     // Comparing the page's depth in the website's tree allows to do that
     const filteredEntries = entries.filter(
-      entry => entry.url && entry.url.split('/').length !== slashes
+      entry =>
+        entry &&
+        entry.url &&
+        entry.url.startsWith(urlBase) &&
+        entry.url.split('/').length !== slashes
     )
 
     return filteredEntries
@@ -32,10 +36,6 @@ const getEntries = async url => {
     console.error(error)
   }
 }
-
-// Returns a random entry from the given entries
-const randomEntry = entries =>
-  entries[Math.floor(Math.random() * Math.floor(entries.length))]
 
 // Getting the description and related pages for a specified entry from the lexicon
 const getEntryDetails = async entry => {
@@ -49,7 +49,11 @@ const getEntryDetails = async entry => {
     // The links are filtered to make sur they are also a lexicon entry
     const linksWithDuplicates = Object.values(document.querySelectorAll('a'))
       .map(link => link.href)
-      .filter(url => url && url.split('/').length !== slashes)
+      .filter(
+        url =>
+          url && url.startsWith(urlBase) && url.split('/').length !== slashes
+      )
+      .map(url => url.split('.html')[0] + '.html')
     // Some links appear twice in some articles : de-duplicating
     const links = Array.from(new Set(linksWithDuplicates))
 
@@ -64,10 +68,6 @@ const getEntryDetails = async entry => {
     console.error(error)
   }
 }
-
-// Fetches the right entry in the lexicon for an url
-const getRelatedEntry = entries => url =>
-  entries.find(entry => entry.url === url)
 
 getEntries(url).then(async entries => {
   const result = []
