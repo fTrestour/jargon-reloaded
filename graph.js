@@ -96,7 +96,6 @@ class Graph {
 
   selectNode(selectedNode) {
     const neighbors = this.getNeighbors(selectedNode)
-
     this.update(selectedNode)
 
     this.nodeElements.attr('fill', node => this.getNodeColor(node, neighbors))
@@ -104,6 +103,7 @@ class Graph {
     this.linkElements.attr('stroke', link =>
       this.getLinkColor(selectedNode, link)
     )
+    this.update(selectedNode)
   }
 
   getNeighbors(node) {

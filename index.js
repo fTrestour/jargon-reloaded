@@ -6,8 +6,8 @@ import Graph from './graph'
 const graph = new Graph({
   data: entries,
   element: document.querySelector('.chart-container'),
-  mainColor: 'gray',
-  secondaryColor: 'blue'
+  mainColor: 'blue',
+  secondaryColor: 'gray'
 })
 
 // const firstEntry = randomEntry(entries)
