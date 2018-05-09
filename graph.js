@@ -91,6 +91,20 @@ class Graph {
       })
   }
 
+  handleMouseOver(element, i) {
+    d3
+      .select('body')
+      .append('div')
+      .text(element.name)
+      .attr('id', 'tooltip')
+      .attr('class', 'tooltip')
+      .style('left', d3.event.pageX + 'px')
+      .style('top', d3.event.pageY + 'px')
+  }
+  handleMouseOut(element, i) {
+    d3.select('#tooltip').remove() // Remove text location
+  }
+
   selectNode(selectedNode) {
     const neighbors = this.getNeighbors(selectedNode)
     this.update(selectedNode)
@@ -169,6 +183,8 @@ class Graph {
       // we link the selectNode method here
       // to update the graph on every click
       .on('click', this.selectNode.bind(this))
+      .on('mouseover', this.handleMouseOver)
+      .on('mouseout', this.handleMouseOut)
 
     this.nodeElements = nodeEnter.merge(this.nodeElements)
   }

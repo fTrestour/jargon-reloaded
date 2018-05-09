@@ -21,3 +21,8 @@ body {
 .selected {
   fill: #52e26a;
 }
+
+.tooltip {
+  background-color: #52e26a;
+  color: #2e2f74;
+}
