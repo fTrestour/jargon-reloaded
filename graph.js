@@ -191,7 +191,7 @@ class Graph {
       .call(this.dragDrop)
       // we link the selectNode method here
       // to update the graph on every click
-      .on('click', this.selectNode)
+      .on('click', this.selectNode.bind(this))
 
     this.nodeElements = nodeEnter.merge(this.nodeElements)
   }
