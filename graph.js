@@ -70,7 +70,7 @@ class Graph {
     this.simulation = d3
       .forceSimulation()
       .force('link', this.linkForce)
-      .force('charge', d3.forceManyBody().strength(-120))
+      .force('charge', d3.forceManyBody().strength(-2000))
       .force('center', d3.forceCenter(this.width / 2, this.height / 2))
   }
   addDragDrop() {
@@ -136,7 +136,7 @@ class Graph {
   update(selectedNode) {
     this.updateData(selectedNode)
     this.updateLinks()
-    this.updateNodes()
+    this.updateNodes(selectedNode)
     this.updateTexts()
     this.updateSimulation()
   }
@@ -176,7 +176,7 @@ class Graph {
 
     this.linkElements = linkEnter.merge(this.linkElements)
   }
-  updateNodes() {
+  updateNodes(selectedNode) {
     this.nodeElements = this.nodeGroup
       .selectAll('circle')
       .data(this.graph.nodes, node => node.url)
@@ -224,7 +224,7 @@ class Graph {
     })
 
     this.simulation.force('link').links(this.graph.links)
-    this.simulation.restart()
+    this.simulation.alphaTarget(0.01).restart()
   }
 
   createLink(source, target) {
