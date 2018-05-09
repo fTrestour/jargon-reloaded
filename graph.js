@@ -34,11 +34,9 @@ class Graph {
     // set up groups
     this.linkGroup = svg.append('g').attr('class', 'links')
     this.nodeGroup = svg.append('g').attr('class', 'nodes')
-    this.textGroup = svg.append('g').attr('class', 'texts')
 
     this.linkElements = null
     this.nodeElements = null
-    this.textElements = null
 
     // create the other stuff
     this.addInitialGraph()
@@ -61,27 +59,26 @@ class Graph {
     }
   }
   addLinkForce() {
-    this.linkForce = d3
-      .forceLink()
-      .id(link => link.url)
-      .strength(link => 1)
+    this.linkForce = d3.forceLink().id(link => link.url)
   }
   createSimulation() {
     this.simulation = d3
       .forceSimulation()
       .force('link', this.linkForce)
-      .force('charge', d3.forceManyBody().strength(-2000))
+      .force('charge', d3.forceManyBody().strength(-5000))
       .force('center', d3.forceCenter(this.width / 2, this.height / 2))
   }
   addDragDrop() {
     this.dragDrop = d3
       .drag()
       .on('start', node => {
+        if (!d3.event.active) {
+          this.simulation.alphaTarget(0.3).restart()
+        }
         node.fx = node.x
         node.fy = node.y
       })
       .on('drag', node => {
-        this.simulation.alphaTarget(0.7).restart()
         node.fx = d3.event.x
         node.fy = d3.event.y
       })
@@ -98,12 +95,11 @@ class Graph {
     const neighbors = this.getNeighbors(selectedNode)
     this.update(selectedNode)
 
-    this.nodeElements.attr('fill', node => this.getNodeColor(node, neighbors))
-    this.textElements.attr('fill', node => this.getTextColor(node, neighbors))
-    this.linkElements.attr('stroke', link =>
-      this.getLinkColor(selectedNode, link)
+    this.nodeElements.attr(
+      'class',
+      node =>
+        this.isNeighborNode(node, neighbors) ? 'nodes selected' : 'nodes'
     )
-    this.update(selectedNode)
   }
 
   getNeighbors(node) {
@@ -119,26 +115,23 @@ class Graph {
   }
   getNodeColor(node, neighbors) {
     return this.isNeighborNode(node, neighbors)
-      ? this.mainColor
-      : this.secondaryColor
+      ? this.secondaryColor
+      : this.mainColor
   }
   getTextColor(node, neighbors) {
     return this.isNeighborNode(node, neighbors)
-      ? this.mainColor
-      : this.secondaryColor
+      ? this.secondaryColor
+      : this.mainColor
   }
   getLinkColor(node, link) {
-    return this.isNeighborLink(node, link)
-      ? this.mainColor
-      : this.secondaryColor
+    return this.secondaryColor
   }
 
   update(selectedNode) {
     this.updateData(selectedNode)
+    this.updateNodes()
     this.updateLinks()
-    this.updateNodes(selectedNode)
-    this.updateTexts()
-    this.updateSimulation()
+    this.updateSimulation(selectedNode)
   }
 
   updateData(selectedNode) {
@@ -161,22 +154,7 @@ class Graph {
     newNodes.forEach(node => this.graph.nodes.push(node))
     newLinks.forEach(link => this.graph.links.push(link))
   }
-  updateLinks() {
-    this.linkElements = this.linkGroup
-      .selectAll('line')
-      .data(this.graph.links, link => link.target.url + link.source.url)
-
-    this.linkElements.exit().remove()
-
-    const linkEnter = this.linkElements
-      .enter()
-      .append('line')
-      .attr('stroke-width', 1)
-      .attr('stroke', link => this.getLinkColor(null, link))
-
-    this.linkElements = linkEnter.merge(this.linkElements)
-  }
-  updateNodes(selectedNode) {
+  updateNodes() {
     this.nodeElements = this.nodeGroup
       .selectAll('circle')
       .data(this.graph.nodes, node => node.url)
@@ -186,8 +164,7 @@ class Graph {
     const nodeEnter = this.nodeElements
       .enter()
       .append('circle')
-      .attr('r', 10)
-      .attr('fill', node => this.getTextColor(node))
+      .attr('class', 'nodes')
       .call(this.dragDrop)
       // we link the selectNode method here
       // to update the graph on every click
@@ -195,27 +172,21 @@ class Graph {
 
     this.nodeElements = nodeEnter.merge(this.nodeElements)
   }
-  updateTexts() {
-    this.textElements = this.textGroup
-      .selectAll('text')
-      .data(this.graph.nodes, node => node.url)
+  updateLinks() {
+    this.linkElements = this.linkGroup
+      .selectAll('line')
+      .data(this.graph.links, link => link.target.url + link.source.url)
 
-    this.textElements.exit().remove()
+    this.linkElements.exit().remove()
 
-    const textEnter = this.textElements
+    this.linkElements = this.linkElements
       .enter()
-      .append('text')
-      .text(node => node.name)
-      .attr('font-size', 15)
-      .attr('dx', 15)
-      .attr('dy', 4)
-
-    this.textElements = textEnter.merge(this.textElements)
+      .append('line')
+      .merge(this.linkElements)
   }
-  updateSimulation() {
+  updateSimulation(selectedNode) {
     this.simulation.nodes(this.graph.nodes).on('tick', () => {
       this.nodeElements.attr('cx', node => node.x).attr('cy', node => node.y)
-      this.textElements.attr('x', node => node.x).attr('y', node => node.y)
       this.linkElements
         .attr('x1', link => link.source.x)
         .attr('y1', link => link.source.y)
@@ -224,7 +195,7 @@ class Graph {
     })
 
     this.simulation.force('link').links(this.graph.links)
-    this.simulation.alphaTarget(0.01).restart()
+    this.simulation.restart()
   }
 
   createLink(source, target) {

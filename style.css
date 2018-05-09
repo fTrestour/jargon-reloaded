@@ -1,9 +1,23 @@
-.node {
-  stroke: #fff;
-  stroke-width: 1.5px;
+body {
+  margin: 0px;
 }
 
-.link {
-  fill: none;
-  stroke: #bbb;
+.chart-container {
+  background-color: #2e2f74;
+}
+
+.links {
+  stroke: #52e26a;
+  stroke-width: 3;
+}
+
+.nodes {
+  r: 30;
+  stroke: #52e26a;
+  fill: #2e2f74;
+  stroke-width: 3;
+}
+
+.selected {
+  fill: #52e26a;
 }
