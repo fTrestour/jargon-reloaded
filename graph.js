@@ -23,7 +23,7 @@ class Graph {
   generate() {
     // define width, height and margin
     this.width = this.element.offsetWidth
-    this.height = window.height
+    this.height = window.innerHeight
 
     // set up parent element and SVG
     this.element.innerHTML = ''
