@@ -5,9 +5,6 @@ class Graph {
     // load in arguments from config object
     this.data = opts.data
     this.element = opts.element
-    this.nodeIds = opts.nodeIds
-    this.mainColor = opts.mainColor
-    this.secondaryColor = opts.secondaryColor
     this.linkStrength = opts.linkStrength
     this.onSelect = opts.onSelect
 
@@ -135,19 +132,6 @@ class Graph {
     return (
       node && (link.target.url === node.url || link.source.url === node.url)
     )
-  }
-  getNodeColor(node, neighbors) {
-    return this.isNeighborNode(node, neighbors)
-      ? this.secondaryColor
-      : this.mainColor
-  }
-  getTextColor(node, neighbors) {
-    return this.isNeighborNode(node, neighbors)
-      ? this.secondaryColor
-      : this.mainColor
-  }
-  getLinkColor(node, link) {
-    return this.secondaryColor
   }
 
   update(selectedNode) {
