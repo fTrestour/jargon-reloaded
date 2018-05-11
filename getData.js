@@ -76,7 +76,7 @@ getEntries(url).then(async entries => {
     entry = await getEntryDetails(entry)
     result.push(entry)
 
-    fs.writeFile('entries.json', JSON.stringify(result, null, 2), function(
+    fs.writeFile('src/entries.json', JSON.stringify(result, null, 2), function(
       err
     ) {
       if (err) {

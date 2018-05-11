@@ -4,7 +4,8 @@
   "description": "jargon-reloaded",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "fetch": "node getData.js"
   },
   "repository": {
