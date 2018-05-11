@@ -44,3 +44,33 @@ svg {
   fill: #52e26a;
   color: #2e2f74;
 }
+
+.description {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 92vh;
+  width: 20vw;
+
+  margin: 2vh;
+  padding: 2vh;
+
+  font-family: 'PT Mono', monospace;
+  overflow-y: auto;
+  color: #52e26a;
+
+  background: #2e2f74;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #52e26a;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
