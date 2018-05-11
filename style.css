@@ -29,29 +29,13 @@ body {
 }
 
 .text {
-  display: block;
-  background-color: #52e26a;
+  position: absolute;
+
+  font-family: 'PT Mono', monospace;
+  text-transform: uppercase;
+
+  padding: 5px 20px 5px 20px;
+
+  background: #52e26a;
   color: #2e2f74;
-  position: absolute;
-}
-
-.text::after {
-  content: '';
-
-  display: inline-block;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  z-index: -1;
-
-  width: 100%;
-  height: 100%;
-
-  background: repeating-linear-gradient(
-    45deg,
-    $secondary-color,
-    $secondary-color 3px,
-    rgba(#fff, 0) 3px,
-    rgba(#fff, 0) 8px
-  );
 }
