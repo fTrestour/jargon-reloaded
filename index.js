@@ -8,5 +8,6 @@ const graph = new Graph({
   element: document.querySelector('.chart-container'),
   mainColor: '#2e2f74',
   secondaryColor: '#52e26a',
-  linkStrength: -4000
+  linkStrength: -4000,
+  onSelect: console.log
 })

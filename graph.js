@@ -9,6 +9,7 @@ class Graph {
     this.mainColor = opts.mainColor
     this.secondaryColor = opts.secondaryColor
     this.linkStrength = opts.linkStrength
+    this.onSelect = opts.onSelect
 
     // create the chart
     this.generate()
@@ -35,12 +36,7 @@ class Graph {
     this.nodeGroup = svg.append('g').attr('class', 'nodes')
 
     // Set up zoom and pan
-    svg.call(
-      d3.zoom().on('zoom', () => {
-        this.linkGroup.attr('transform', d3.event.transform)
-        this.nodeGroup.attr('transform', d3.event.transform)
-      })
-    )
+    this.addZoom(svg)
 
     this.linkElements = null
     this.nodeElements = null
@@ -55,6 +51,14 @@ class Graph {
     this.update()
   }
 
+  addZoom(element) {
+    element.call(
+      d3.zoom().on('zoom', () => {
+        this.linkGroup.attr('transform', d3.event.transform)
+        this.nodeGroup.attr('transform', d3.event.transform)
+      })
+    )
+  }
   addInitialGraph() {
     const firstNode = this.data[
       Math.floor(Math.random() * Math.floor(this.data.length))
@@ -117,6 +121,8 @@ class Graph {
         node =>
           this.isNeighborNode(node, neighbors) ? 'text selected' : 'text'
       )
+
+    this.onSelect(selectedNode)
   }
 
   getNeighbors(node) {
