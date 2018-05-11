@@ -8,6 +8,7 @@ class Graph {
     this.nodeIds = opts.nodeIds
     this.mainColor = opts.mainColor
     this.secondaryColor = opts.secondaryColor
+    this.linkStrength = opts.linkStrength
 
     // create the chart
     this.generate()
@@ -71,7 +72,7 @@ class Graph {
     this.simulation = d3
       .forceSimulation()
       .force('link', this.linkForce)
-      .force('charge', d3.forceManyBody().strength(-5000))
+      .force('charge', d3.forceManyBody().strength(this.linkStrength))
       .force('center', d3.forceCenter(this.width / 2, this.height / 2))
   }
   addDragDrop() {
@@ -185,8 +186,6 @@ class Graph {
     nodeGroupEnter
       .append('rect')
       .attr('class', 'node')
-      .attr('width', 100)
-      .attr('height', 50)
       .call(this.dragDrop)
       .on('click', this.selectNode.bind(this))
 
