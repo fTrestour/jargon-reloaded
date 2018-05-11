@@ -3,7 +3,15 @@ body {
 }
 
 .chart-container {
+  height: 100vh;
+  overflow: hidden;
+
   background-color: #2e2f74;
+}
+
+svg {
+  width: 1000%;
+  height: 1000%;
 }
 
 .link {
@@ -12,30 +20,24 @@ body {
 }
 
 .node {
-  r: 30;
   stroke: #52e26a;
   fill: #2e2f74;
   stroke-width: 3;
 }
 
-.selected {
-  fill: #52e26a;
-}
-
-.tooltip {
-  background-color: #52e26a;
-  color: #2e2f74;
-  position: absolute;
-}
-
 .text {
-  position: absolute;
+  padding: 5px;
+  width: 90px;
+  height: 60px;
 
   font-family: 'PT Mono', monospace;
   text-transform: uppercase;
+  text-overflow: ellipsis;
 
-  padding: 5px 20px 5px 20px;
+  color: #52e26a;
+}
 
-  background: #52e26a;
+.selected {
+  fill: #52e26a;
   color: #2e2f74;
 }

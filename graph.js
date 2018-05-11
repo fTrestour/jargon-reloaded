@@ -28,20 +28,13 @@ class Graph {
     // set up parent element and SVG
     this.element.innerHTML = ''
     const svg = d3.select(this.element).append('svg')
-    svg.attr('width', this.width)
-    svg.attr('height', this.height)
 
     // set up groups
     this.linkGroup = svg.append('g').attr('class', 'links')
     this.nodeGroup = svg.append('g').attr('class', 'nodes')
-    this.textGroup = d3
-      .select('body')
-      .append('div')
-      .attr('class', 'texts')
 
     this.linkElements = null
     this.nodeElements = null
-    this.textElements = null
 
     // create the other stuff
     this.addInitialGraph()
@@ -96,28 +89,25 @@ class Graph {
       })
   }
 
-  handleMouseOver(element, i) {
-    d3
-      .select('body')
-      .append('div')
-      .text(element.name)
-      .attr('id', 'tooltip')
-      .attr('class', 'tooltip')
-      .style('left', d3.event.pageX + 'px')
-      .style('top', d3.event.pageY + 'px')
-  }
-  handleMouseOut(element, i) {
-    d3.select('#tooltip').remove() // Remove text location
-  }
-
   selectNode(selectedNode) {
     const neighbors = this.getNeighbors(selectedNode)
     this.update(selectedNode)
 
-    this.nodeElements.attr(
-      'class',
-      node => (this.isNeighborNode(node, neighbors) ? 'node selected' : 'node')
-    )
+    this.nodeElements
+      .select('rect')
+      .attr(
+        'class',
+        node =>
+          this.isNeighborNode(node, neighbors) ? 'node selected' : 'node'
+      )
+    this.nodeElements
+      .select('foreignObject')
+      .select('div')
+      .attr(
+        'class',
+        node =>
+          this.isNeighborNode(node, neighbors) ? 'text selected' : 'text'
+      )
   }
 
   getNeighbors(node) {
@@ -148,7 +138,6 @@ class Graph {
   update(selectedNode) {
     this.updateData(selectedNode)
     this.updateNodes()
-    this.updateTexts()
     this.updateLinks()
     this.updateSimulation(selectedNode)
   }
@@ -175,36 +164,33 @@ class Graph {
   }
   updateNodes() {
     this.nodeElements = this.nodeGroup
-      .selectAll('circle')
+      .selectAll('g')
       .data(this.graph.nodes, node => node.url)
 
     this.nodeElements.exit().remove()
 
-    const nodeEnter = this.nodeElements
+    const nodeGroupEnter = this.nodeElements
       .enter()
-      .append('circle')
+      .append('g')
+      .attr('id', node => node.url)
+
+    nodeGroupEnter
+      .append('rect')
       .attr('class', 'node')
+      .attr('width', 100)
+      .attr('height', 50)
       .call(this.dragDrop)
-      // we link the selectNode method here
-      // to update the graph on every click
       .on('click', this.selectNode.bind(this))
-    // .on('mouseover', this.handleMouseOver)
-    // .on('mouseout', this.handleMouseOut)
 
-    this.nodeElements = nodeEnter.merge(this.nodeElements)
-  }
-  updateTexts() {
-    this.textElements = this.textGroup.selectAll('div').data(this.graph.nodes)
-
-    this.textElements.exit().remove()
-
-    const textEnter = this.textElements
-      .enter()
-      .append('div')
-      .attr('class', 'text')
+    nodeGroupEnter
+      .append('foreignObject')
+      .append('xhtml:div')
       .text(node => node.name)
+      .attr('class', 'text')
+      .call(this.dragDrop)
+      .on('click', this.selectNode.bind(this))
 
-    this.textElements = textEnter.merge(this.textElements)
+    this.nodeElements = nodeGroupEnter.merge(this.nodeElements)
   }
   updateLinks() {
     this.linkElements = this.linkGroup
@@ -221,10 +207,14 @@ class Graph {
   }
   updateSimulation(selectedNode) {
     this.simulation.nodes(this.graph.nodes).on('tick', () => {
-      this.nodeElements.attr('cx', node => node.x).attr('cy', node => node.y)
-      this.textElements
-        .style('left', node => node.x + 'px')
-        .style('top', node => node.y + 'px')
+      this.nodeElements
+        .select('rect')
+        .attr('x', node => node.x - 50)
+        .attr('y', node => node.y - 25)
+      this.nodeElements
+        .select('foreignObject')
+        .attr('x', node => node.x - 50)
+        .attr('y', node => node.y - 25)
       this.linkElements
         .attr('x1', link => link.source.x)
         .attr('y1', link => link.source.y)
