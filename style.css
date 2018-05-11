@@ -9,6 +9,11 @@ body {
   background-color: #2e2f74;
 }
 
+svg {
+  width: 1000%;
+  height: 1000%;
+}
+
 .link {
   stroke: #52e26a;
   stroke-width: 3;
