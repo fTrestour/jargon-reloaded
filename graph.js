@@ -34,9 +34,14 @@ class Graph {
     // set up groups
     this.linkGroup = svg.append('g').attr('class', 'links')
     this.nodeGroup = svg.append('g').attr('class', 'nodes')
+    this.textGroup = d3
+      .select('body')
+      .append('div')
+      .attr('class', 'texts')
 
     this.linkElements = null
     this.nodeElements = null
+    this.textElements = null
 
     // create the other stuff
     this.addInitialGraph()
@@ -111,8 +116,7 @@ class Graph {
 
     this.nodeElements.attr(
       'class',
-      node =>
-        this.isNeighborNode(node, neighbors) ? 'nodes selected' : 'nodes'
+      node => (this.isNeighborNode(node, neighbors) ? 'node selected' : 'node')
     )
   }
 
@@ -144,6 +148,7 @@ class Graph {
   update(selectedNode) {
     this.updateData(selectedNode)
     this.updateNodes()
+    this.updateTexts()
     this.updateLinks()
     this.updateSimulation(selectedNode)
   }
@@ -178,15 +183,28 @@ class Graph {
     const nodeEnter = this.nodeElements
       .enter()
       .append('circle')
-      .attr('class', 'nodes')
+      .attr('class', 'node')
       .call(this.dragDrop)
       // we link the selectNode method here
       // to update the graph on every click
       .on('click', this.selectNode.bind(this))
-      .on('mouseover', this.handleMouseOver)
-      .on('mouseout', this.handleMouseOut)
+    // .on('mouseover', this.handleMouseOver)
+    // .on('mouseout', this.handleMouseOut)
 
     this.nodeElements = nodeEnter.merge(this.nodeElements)
+  }
+  updateTexts() {
+    this.textElements = this.textGroup.selectAll('div').data(this.graph.nodes)
+
+    this.textElements.exit().remove()
+
+    const textEnter = this.textElements
+      .enter()
+      .append('div')
+      .attr('class', 'text')
+      .text(node => node.name)
+
+    this.textElements = textEnter.merge(this.textElements)
   }
   updateLinks() {
     this.linkElements = this.linkGroup
@@ -198,11 +216,15 @@ class Graph {
     this.linkElements = this.linkElements
       .enter()
       .append('line')
+      .attr('class', 'link')
       .merge(this.linkElements)
   }
   updateSimulation(selectedNode) {
     this.simulation.nodes(this.graph.nodes).on('tick', () => {
       this.nodeElements.attr('cx', node => node.x).attr('cy', node => node.y)
+      this.textElements
+        .style('left', node => node.x + 'px')
+        .style('top', node => node.y + 'px')
       this.linkElements
         .attr('x1', link => link.source.x)
         .attr('y1', link => link.source.y)
