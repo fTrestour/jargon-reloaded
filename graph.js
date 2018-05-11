@@ -33,6 +33,14 @@ class Graph {
     this.linkGroup = svg.append('g').attr('class', 'links')
     this.nodeGroup = svg.append('g').attr('class', 'nodes')
 
+    // Set up zoom and pan
+    svg.call(
+      d3.zoom().on('zoom', () => {
+        this.linkGroup.attr('transform', d3.event.transform)
+        this.nodeGroup.attr('transform', d3.event.transform)
+      })
+    )
+
     this.linkElements = null
     this.nodeElements = null
 
